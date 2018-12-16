@@ -25,6 +25,8 @@
 
 @implementation GUITabPagerViewController
 
+NSMutableArray *allTabViews;
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setEdgesForExtendedLayout:UIRectEdgeNone];
@@ -46,6 +48,20 @@
   [self addChildViewController:self.pageViewController];
   [self.view addSubview:self.pageViewController.view];
   [self.pageViewController didMoveToParentViewController:self];
+}
+
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    if ([[self dataSource] respondsToSelector:@selector(titleColor)]) {
+        if (allTabViews.count > _selectedIndex && [allTabViews[_selectedIndex] isKindOfClass:[UILabel class]]) {
+            UILabel *label = allTabViews[_selectedIndex];
+            label.textColor = [self.dataSource titleColor];
+        }
+        if (allTabViews.count > selectedIndex && [allTabViews[selectedIndex] isKindOfClass:[UILabel class]]) {
+            UILabel *label = allTabViews[selectedIndex];
+            label.textColor = [self.dataSource tabColor];
+        }
+    }
+    _selectedIndex = selectedIndex;
 }
 
 #pragma mark - Page View Data Source
@@ -192,12 +208,10 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers {
 
   [self setupUI];
 
-  NSMutableArray *tabViews;
-
   if ([[self dataSource] respondsToSelector:@selector(viewForTabAtIndex:)]) {
-    tabViews = [self addTabsFromViews];
+    allTabViews = [self addTabsFromViews];
   } else {
-    tabViews = [self addTabsFromTitles];
+    allTabViews = [self addTabsFromTitles];
   }
 
   if ([self header]) {
@@ -215,7 +229,7 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers {
   }
 
   self.header = [[GUITabScrollView alloc] initWithFrame:frame
-                                               tabViews:tabViews
+                                               tabViews:allTabViews
                                                   color:[self headerColor]
                                        bottomLineHeight: bottomLineHeight
                                        selectedTabIndex:self.selectedIndex];

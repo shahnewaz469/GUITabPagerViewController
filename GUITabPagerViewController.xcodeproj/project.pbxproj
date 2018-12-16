@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353300C321C6BAA6005F41F7 /* GUITabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353300C221C6BAA6005F41F7 /* GUITabPagerViewController.m */; };
 		796C72B91AA13C8600BF4A99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72B81AA13C8600BF4A99 /* main.m */; };
 		796C72BC1AA13C8600BF4A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72BB1AA13C8600BF4A99 /* AppDelegate.m */; };
 		796C72BF1AA13C8600BF4A99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72BE1AA13C8600BF4A99 /* ViewController.m */; };
@@ -14,7 +15,6 @@
 		796C72C41AA13C8600BF4A99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796C72C31AA13C8600BF4A99 /* Images.xcassets */; };
 		796C72C71AA13C8600BF4A99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796C72C51AA13C8600BF4A99 /* LaunchScreen.xib */; };
 		796C72D31AA13C8600BF4A99 /* GUITabPagerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72D21AA13C8600BF4A99 /* GUITabPagerViewControllerTests.m */; };
-		796C72E11AA13CB900BF4A99 /* GUITabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72DE1AA13CB900BF4A99 /* GUITabPagerViewController.m */; };
 		796C72E21AA13CB900BF4A99 /* GUITabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796C72E01AA13CB900BF4A99 /* GUITabScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		353300C221C6BAA6005F41F7 /* GUITabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabPagerViewController.m; sourceTree = "<group>"; };
 		796C72B31AA13C8600BF4A99 /* GUITabPagerViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUITabPagerViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796C72B71AA13C8600BF4A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796C72B81AA13C8600BF4A99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		796C72D11AA13C8600BF4A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796C72D21AA13C8600BF4A99 /* GUITabPagerViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUITabPagerViewControllerTests.m; sourceTree = "<group>"; };
 		796C72DD1AA13CB900BF4A99 /* GUITabPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITabPagerViewController.h; sourceTree = "<group>"; };
-		796C72DE1AA13CB900BF4A99 /* GUITabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabPagerViewController.m; sourceTree = "<group>"; };
 		796C72DF1AA13CB900BF4A99 /* GUITabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITabScrollView.h; sourceTree = "<group>"; };
 		796C72E01AA13CB900BF4A99 /* GUITabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				796C72DD1AA13CB900BF4A99 /* GUITabPagerViewController.h */,
-				796C72DE1AA13CB900BF4A99 /* GUITabPagerViewController.m */,
+				353300C221C6BAA6005F41F7 /* GUITabPagerViewController.m */,
 				796C72DF1AA13CB900BF4A99 /* GUITabScrollView.h */,
 				796C72E01AA13CB900BF4A99 /* GUITabScrollView.m */,
 			);
@@ -238,10 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796C72E11AA13CB900BF4A99 /* GUITabPagerViewController.m in Sources */,
 				796C72BF1AA13C8600BF4A99 /* ViewController.m in Sources */,
 				796C72BC1AA13C8600BF4A99 /* AppDelegate.m in Sources */,
 				796C72B91AA13C8600BF4A99 /* main.m in Sources */,
+				353300C321C6BAA6005F41F7 /* GUITabPagerViewController.m in Sources */,
 				796C72E21AA13CB900BF4A99 /* GUITabScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
