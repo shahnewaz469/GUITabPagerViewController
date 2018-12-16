@@ -179,13 +179,10 @@
     [tab setTranslatesAutoresizingMaskIntoConstraints:NO];
     [contentView addSubview:tab];
 
-    [VFL appendFormat:@"-10-[T%d]", index];
+    [VFL appendFormat:@"-20-[T%d]", index];
     tabViewsDict[[NSString stringWithFormat:@"T%d", index]] = tab;
 
-    [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[T]-0-|"
-                                                                        options:0
-                                                                        metrics:nil
-                                                                          views:@{@"T": tab}]];
+    [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[T]-0-|" options:0 metrics:nil views:@{@"T": tab}]];
     [tab setUserInteractionEnabled:YES];
     [tab addGestureRecognizer:[
                                [UITapGestureRecognizer alloc] initWithTarget:self
@@ -193,7 +190,7 @@
      ];
   }
 
-  [VFL appendString:@"-10-|"];
+  [VFL appendString:@"-20-|"];
   [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:VFL
                                                                       options:0
                                                                       metrics:nil

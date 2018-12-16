@@ -325,10 +325,6 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers {
     [label setFont:font];
     [label setTextColor:color];
     [label sizeToFit];
-
-    CGRect frame = [label frame];
-    frame.size.width = MAX(frame.size.width + 20, 85);
-    [label setFrame:frame];
     [tabViews addObject:label];
   }
   
